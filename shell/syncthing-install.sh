@@ -11,6 +11,7 @@ apt-get update
 apt-get install syncthing -y
 
 useradd -r syncthing -m -d /home/syncthing
+usermod -a -G users syncthing
 systemctl enable syncthing@syncthing.service
 # systemctl start syncthing@syncthing.service
 curl -I 127.0.0.1:8384

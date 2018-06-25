@@ -7,14 +7,13 @@ GET /account/
 GET /accounts/
 GET /adm/
 GET /admin.php
-GET /admin/
 GET /administrator/
 GET /ar/
 GET /backup.tar.gz
 GET /backup.tgz
 GET /backup.zip
-GET /backup/
 GET /backups/
+GET /basic_status/
 GET /bitcoin.php
 GET /board/
 GET /c99.php
@@ -24,7 +23,6 @@ GET /config/
 GET /content/
 GET /controlpanel/
 GET /courses
-GET /cpanel/
 GET /data/
 GET /db.sql
 GET /de/
@@ -39,6 +37,7 @@ GET /dump.sql.zip
 GET /dump.tar.gz
 GET /dump.tgz
 GET /dump.zip
+GET /dump/
 GET /en/
 GET /es/
 GET /etc/
@@ -68,7 +67,6 @@ GET /old/
 GET /phpbb/
 GET /phpinfo
 GET /phpinfo.php
-GET /phpmyadmin/
 GET /pma/
 GET /priv/
 GET /private/
@@ -76,6 +74,8 @@ GET /register
 GET /register.php
 GET /secret/
 GET /server-info
+GET /server-info/
+GET /server-status/
 GET /settings.php
 GET /shell.php
 GET /site.tar.gz
@@ -97,3 +97,8 @@ GET /wallet.zip
 GET /web/
 GET /webalizer/
 GET /webdav/
+GET /wp-admin/
+GET /wp-content/
+GET /wp-content/uploads/
+GET /wp-includes/
+GET /~root/

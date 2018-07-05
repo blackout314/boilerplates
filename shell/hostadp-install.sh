@@ -29,9 +29,8 @@ cat > /etc/default/hostapd <<EOL
   interface=uap0
   # driver=
   ssid=awesomewifi
-  country_code=GB
   hw_mode=g
-  channel=10
+  channel=11
   macaddr_acl=0
   auth_algs=1
   ignore_broadcast_ssid=0

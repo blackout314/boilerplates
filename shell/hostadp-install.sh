@@ -1,8 +1,15 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+RESET='\033[0m'
 
-apt-get install hostapd dnsmasq
+echo -e "${GREEN}INSTALL${RESET} hostapd dnsmasq"
+
+apt-get install hostapd dnsmasq -y
 systemctl disable hostapd
 systemctl disable dnsmasq
+
+echo -e "${GREEN}ADD${RESET} virtual device uap0"
 
 cat >> /etc/network/interfaces <<EOL
 
@@ -14,6 +21,8 @@ iface uap0 inet static
   broadcast 192.168.50.255
   gateway 192.168.50.1
 EOL
+
+echo -e "${GREEN}ADD${RESET} hostapd conf"
 
 cat > /etc/default/hostapd <<EOL
 
@@ -35,11 +44,15 @@ cat > /etc/default/hostapd <<EOL
   wme_enabled=1
 EOL
 
+echo -e "${GREEN}ADD${RESET} hostapd.conf conf"
+
 cat > /etc/hostapd/hostapd.conf <<EOL
   DAEMON_CONF="/etc/hostapd/hostapd.conf"
 EOL
 
-cat > /etc/dnsmasq.confg <<EOL
+echo -e "${GREEN}ADD${RESET} dnsmasq.conf conf"
+
+cat > /etc/dnsmasq.conf <<EOL
 
   interface=uap0
   no-dhcp-interface=lo,wlan0
@@ -50,6 +63,7 @@ cat > /etc/dnsmasq.confg <<EOL
   dhcp-range=192.168.50.50,192.168.50.150,12h
 EOL
 
+echo -e "${GREEN}ADD${RESET} hostapdstart executable"
 
 cat > /usr/local/bin/hostapdstart <<EOL
 

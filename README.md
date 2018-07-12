@@ -8,3 +8,4 @@
 ### Useful Libs
 * https://github.com/chmln/flatpickr
 * https://github.com/tbleckert/react-select-search react select typeahead
+* https://leaverou.github.io/multirange/ time range html5

@@ -7,3 +7,4 @@
 
 ### Useful Libs
 * https://github.com/chmln/flatpickr
+* https://github.com/tbleckert/react-select-search react select typeahead

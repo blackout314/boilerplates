@@ -13,6 +13,6 @@ iface usb0 inet static
         address 192.168.2.2
         netmask 255.255.255.0
         network 192.168.2.0
-        broadcast 192.168.7.255
+        broadcast 192.168.2.255
         gateway 192.168.2.1
 ```

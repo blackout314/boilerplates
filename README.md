@@ -9,3 +9,6 @@
 * https://github.com/chmln/flatpickr
 * https://github.com/tbleckert/react-select-search react select typeahead
 * https://github.com/leongersen/noUiSlider/ time range html5
+
+### Emoji
+* http://www.unicode.org/emoji/charts/full-emoji-list.html

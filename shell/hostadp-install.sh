@@ -67,6 +67,8 @@ cat > /usr/local/bin/hostapdstart <<EOL
 #!/bin/bash
 /sbin/iw dev wlan0 interface add uap0 type __ap
 sysctl net.ipv4.ip_forward=1
+iptables -F
+iptables -t nat -F
 iptables -t nat -A POSTROUTING -s 192.168.50.0/24 ! -d 192.168.50.0/24 -j MASQUERADE
 ifup uap0
 systemctl start dnsmasq
